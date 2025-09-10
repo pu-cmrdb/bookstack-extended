@@ -35,3 +35,4 @@
 .page-content figure > figcaption { font-style: italic; font-size: small; }
 
 .page-content math { font-family: "Latin Modern Math", serif; text-transform: math-auto; }
+.page-content math[display="block"] { display: block math; }
