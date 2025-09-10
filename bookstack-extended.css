@@ -9,11 +9,10 @@
 }
 
 /* Tweaks */
-blockquote::before { content: none; }
-blockquote > p { position: relative; }
-blockquote > p::before { content: '“'; display: inline-block; position: absolute; top: 0; left: -4px; translate: -100% 0; line-height: 1.25; font-size: 2em; font-weight: bold; color: oklch(0.5982 0 0); }
+.page-content blockquote::before { content: none; }
+.page-content blockquote > p { position: relative; }
+.page-content blockquote > p::before { content: '“'; display: inline-block; position: absolute; top: 0; left: -4px; translate: -100% 0; line-height: 1.25; font-size: 2em; font-weight: bold; color: oklch(0.5982 0 0); }
 .page-content { position: relative; }
-.page-content blockquote:before { left: 0; }
 #bkmrk-page-title { margin-top: 42px; }
 
 .bse-excerpt { display: none; }
