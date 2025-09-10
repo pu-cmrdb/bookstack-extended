@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Noto+Sans+TC:wght@100..900&family=Noto+Serif+TC:wght@200..900&display=swap');
+
+:root { --font-code: Firple, "Jetbrains Mono", "Momiage Mono", monospace; }
+
+.page-content { position: relative; }
+.excerpt { display: none; }
+
+
+#bkmrk-page-title { margin-top: 42px; }
+.toolbar { position: absolute; top: 0; right: 0; display: flex; flex-direction: row; justify-content: flex-end; }
+
+.segmented-button { position: relative; display: inline-flex; width: fit-content; margin: 0 4px; padding: 0 4px; border: 1px solid oklch(0.5982 0 0 / 40%); border-radius: 8px; }
+.segmented-button legend { font-size: .65rem; padding: 0 2px; }
+.segmented-button .segment { display: none; }
+.segmented-button .segment + label { padding: 4px 8px; font-size: .75rem; }
+.segmented-button .segment:checked + label { color: #1F6EA7; font-weight: bold; }
