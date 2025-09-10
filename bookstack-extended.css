@@ -31,4 +31,4 @@
 
 /* Figure with caption */
 .page-content figure { display: flex; flex-direction: column; align-items: center; }
-.page-content figure > figcaption { font-style: italic; }
+.page-content figure > figcaption { font-style: italic; font-size: small; }
