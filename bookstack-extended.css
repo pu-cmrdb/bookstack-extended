@@ -34,4 +34,4 @@
 .page-content figure { display: flex; flex-direction: column; align-items: center; }
 .page-content figure > figcaption { font-style: italic; font-size: small; }
 
-.page-content math { font-family: "Latin Modern Math", serif; }
+.page-content math { font-family: "Latin Modern Math", serif; text-transform: math-auto; }
