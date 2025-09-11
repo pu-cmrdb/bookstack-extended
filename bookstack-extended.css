@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Noto+Sans+TC:wght@100..900&family=Noto+Serif+TC:wght@200..900&display=swap');
 @import url('https://fonts.cdnfonts.com/css/latin-modern-math');
+@import url('https://unpkg.com/lucide-static@latest/font/lucide.css');
 
 :root {
   --bse-font-sans: "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", "Heiti TC", "PMingLiU", sans-serif;;
   --bse-font-serif: "Noto Serif TC", "Songti TC", "PMingLiU", "MingLiU", serif;
   --bse-font-code: Firple, "Jetbrains Mono", "Momiage Mono", monospace;
-
   --font-code: var(--bse-font-code);
+
+  --bse-radius: 0.65rem;
 }
 
 /* Tweaks */
@@ -36,3 +38,81 @@
 
 .page-content math { font-family: "Latin Modern Math", serif; text-transform: math-auto; }
 .page-content math[display="block"] { display: block math; }
+
+/* Custom Alert */
+
+
+bse-alert {
+  --bse-alert-color: oklch(0.141 0.005 285.823);
+  
+  position: relative;
+  display: block;
+  border: 1px solid var(--bse-alert-color);
+  border-radius: var(--bse-radius);
+  padding: 16px 16px 16px 48px;
+  background-color: color-mix(in lab, var(--bse-alert-color) 10%, transparent);
+  color: var(--bse-alert-color);
+}
+
+bse-alert > p:first-child {
+  position: relative;
+  height: 1.5em;
+  margin-top: 0;
+  font-weight: bold;
+  padding: 0;
+}
+
+bse-alert:not(:has(> p))::before,
+bse-alert > p:first-child::before {
+  display: block;
+  place-items: center;
+  position: absolute;
+  top: 0;
+  left: -8px;
+  translate: -100%;
+  font-size: 1.25em;
+  font-family: 'lucide' !important;
+  height: inherit;
+  line-height: 1.4;
+  user-select: none;
+}
+
+bse-alert[info]:not(:has(> p))::before,
+bse-alert[info] > p:first-child::before  {
+  content: '\e0f9';
+}
+bse-alert[info] {
+  --bse-alert-color: oklch(0.5399 0.1906 257.48);
+}
+
+bse-alert[warn]:not(:has(> p))::before,
+bse-alert[warn] > p:first-child::before  {
+  content: '\e193';
+}
+bse-alert[warn] {
+  --bse-alert-color: oklch(0.6677 0.1387 78.46);
+}
+
+bse-alert[danger]:not(:has(> p))::before,
+bse-alert[danger] > p:first-child::before  {
+  content: '\e127';
+}
+bse-alert[danger] {
+  --bse-alert-color: oklch(0.5517 0.2051 24.53);
+}
+
+bse-alert[tip]:not(:has(> p))::before,
+bse-alert[tip] > p:first-child::before  {
+  content: '\e1c2';
+}
+bse-alert[tip] {
+  --bse-alert-color: oklch(0.5244 0.1401 148.04);
+}
+
+bse-alert[important]:not(:has(> p))::before,
+bse-alert[important] > p:first-child::before  {
+  content: '\e4f4';
+}
+bse-alert[important] {
+  --bse-alert-color: oklch(0.5631 0.2069 294.97);
+}
