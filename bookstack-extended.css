@@ -62,6 +62,10 @@ bse-alert > p:first-child {
   padding: 0;
 }
 
+bse-alert > p:last-child {
+  margin-bottom: 0;
+}
+
 bse-alert:not(:has(> p))::before,
 bse-alert > p:first-child::before {
   display: block;
