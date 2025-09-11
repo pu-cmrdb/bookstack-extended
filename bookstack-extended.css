@@ -40,8 +40,6 @@
 .page-content math[display="block"] { display: block math; }
 
 /* Custom Alert */
-
-
 bse-alert {
   --bse-alert-color: oklch(0.141 0.005 285.823);
   
@@ -58,7 +56,6 @@ bse-alert > p:first-child {
   position: relative;
   height: 1.5em;
   margin-top: 0;
-  font-weight: bold;
   padding: 0;
 }
 
